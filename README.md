@@ -1,4 +1,4 @@
-# Welcome to Remix!
+# Welcome to Remix + AI SDK OF VERCEL!
 
 - 📖 [Remix docs](https://remix.run/docs)
 
@@ -15,8 +15,7 @@ npm install
    - Completa las siguientes variables requeridas:
      ```
      OPENAI_API_KEY=tu_api_key_de_openai
-     CLAUDE_API_KEY=tu_api_key_de_anthropic
-     DATABASE_URL=tu_url_de_base_de_datos
+     OPENAI_MODEL=gpt-4o-mini
      ```
 
 ## Desarrollo
@@ -27,9 +26,29 @@ Ejecuta el servidor de desarrollo:
 npm run dev
 ```
 
-## Despliegue
+## Despliegue en Vercel
 
-Primero, construye la aplicación para producción:
+Este proyecto está preconfigurado para ser desplegado en Vercel. Para desplegarlo:
+
+1. Crea una cuenta en [Vercel](https://vercel.com) si aún no tienes una
+2. Instala Vercel CLI (opcional):
+   ```sh
+   npm i -g vercel
+   ```
+3. Conecta tu repositorio con Vercel:
+   - Ve a [vercel.com/new](https://vercel.com/new)
+   - Importa tu repositorio
+   - Vercel detectará automáticamente que es un proyecto Remix
+   - Configura las variables de entorno necesarias en la interfaz de Vercel
+
+También puedes desplegar directamente desde la línea de comandos:
+```sh
+vercel
+```
+
+## Construcción Local
+
+Si deseas construir la aplicación localmente:
 
 ```sh
 npm run build
@@ -40,17 +59,6 @@ Luego ejecuta la aplicación en modo producción:
 ```sh
 npm start
 ```
-
-Ahora necesitarás elegir un host para hacer el despliegue.
-
-### DIY
-
-Si estás familiarizado con el despliegue de aplicaciones Node, el servidor de aplicaciones incorporado de Remix está listo para producción.
-
-Asegúrate de desplegar el resultado de `npm run build`:
-
-- `build/server`
-- `build/client`
 
 ## Estilos
 
