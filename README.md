@@ -1,6 +1,8 @@
 # Welcome to Remix + AI SDK OF VERCEL!
 
 - 📖 [Remix docs](https://remix.run/docs)
+- 📖 [Vercel AI SDK](https://sdk.vercel.ai/)
+- 📖 [Vercel AI SDK - AI SDK for Remix examples](https://github.com/vercel/ai/tree/aa23feddc92694e11b049fe875824e2d2622a38d/examples/remix-openai/app/routes)
 
 ## Configuración Inicial
 
