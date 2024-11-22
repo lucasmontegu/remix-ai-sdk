@@ -2,39 +2,56 @@
 
 - 📖 [Remix docs](https://remix.run/docs)
 
-## Development
+## Configuración Inicial
 
-Run the dev server:
+1. Instala las dependencias del proyecto:
+
+```shellscript
+npm install
+```
+
+2. Configura las variables de entorno:
+   - Copia el archivo `.env.example` a `.env`
+   - Completa las siguientes variables requeridas:
+     ```
+     OPENAI_API_KEY=tu_api_key_de_openai
+     CLAUDE_API_KEY=tu_api_key_de_anthropic
+     DATABASE_URL=tu_url_de_base_de_datos
+     ```
+
+## Desarrollo
+
+Ejecuta el servidor de desarrollo:
 
 ```shellscript
 npm run dev
 ```
 
-## Deployment
+## Despliegue
 
-First, build your app for production:
+Primero, construye la aplicación para producción:
 
 ```sh
 npm run build
 ```
 
-Then run the app in production mode:
+Luego ejecuta la aplicación en modo producción:
 
 ```sh
 npm start
 ```
 
-Now you'll need to pick a host to deploy it to.
+Ahora necesitarás elegir un host para hacer el despliegue.
 
 ### DIY
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+Si estás familiarizado con el despliegue de aplicaciones Node, el servidor de aplicaciones incorporado de Remix está listo para producción.
 
-Make sure to deploy the output of `npm run build`
+Asegúrate de desplegar el resultado de `npm run build`:
 
 - `build/server`
 - `build/client`
 
-## Styling
+## Estilos
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+Esta plantilla viene con [Tailwind CSS](https://tailwindcss.com/) ya configurado para una experiencia inicial simple y predeterminada. Puedes usar el framework CSS que prefieras. Consulta la [documentación de Vite sobre CSS](https://vitejs.dev/guide/features.html#css) para más información.
