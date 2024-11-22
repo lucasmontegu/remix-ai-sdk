@@ -17,34 +17,38 @@ export default function Index() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   
   return (
-    <div className="flex h-screen bg-gray-50">
-      {/* Panel izquierdo para input */}
-      <div className="w-1/3 border-r border-gray-200 p-4 flex flex-col bg-white shadow-sm">
-        <h1 className="text-2xl font-bold mb-4">AI Assistant</h1>
-        <Form 
-          onSubmit={handleSubmit} 
-          className="mt-auto"
-        >
-          <div className="relative">
-            <Textarea
-              value={input}
-              placeholder="¿En qué puedo ayudarte?"
-              onChange={handleInputChange}
-              className="min-h-[100px] pr-12 border-2 focus:border-blue-500"
-            />
-            <Button 
-              type="submit" 
-              size="icon"
-              className="absolute bottom-2 right-2 hover:bg-blue-600"
-            >
-              <Send className="h-4 w-4" />
-            </Button>
-          </div>
-        </Form>
+    <div className="flex flex-col h-screen bg-gray-50 lg:flex-row">
+      {/* Panel de input - fijo abajo en móvil, izquierda en desktop */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 lg:relative lg:w-1/3 lg:border-r lg:border-t-0">
+        <div className="max-w-3xl mx-auto lg:max-w-none">
+          {/* Título solo visible en desktop */}
+          <h1 className="hidden lg:block text-2xl font-bold mb-4">AI Assistant</h1>
+          
+          <Form 
+            onSubmit={handleSubmit} 
+            className="lg:mt-auto"
+          >
+            <div className="relative">
+              <Textarea
+                value={input}
+                placeholder="¿En qué puedo ayudarte?"
+                onChange={handleInputChange}
+                className="min-h-[100px] pr-12 border-2 focus:border-blue-500"
+              />
+              <Button 
+                type="submit" 
+                size="icon"
+                className="absolute bottom-2 right-2 hover:bg-blue-600"
+              >
+                <Send className="h-4 w-4" />
+              </Button>
+            </div>
+          </Form>
+        </div>
       </div>
 
-      {/* Panel derecho para mensajes */}
-      <div className="flex-1 p-4 flex flex-col">
+      {/* Panel de mensajes - scrolleable en móvil, derecha en desktop */}
+      <div className="flex-1 p-4 pb-[180px] lg:pb-4">
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-full p-4">
           <ScrollArea className="h-full">
             {messages.length === 0 ? (
